@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilibili移动端</title>
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+
+</head>
+
+<body>
+    <!-- 图标库 -->
+    <svg style="display: none;">
+        <!-- 搜索图标  -->
+        <symbol id="nav-search" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="m11.271 11.978l3.872 3.873a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.708l-3.565-3.564c2.38-2.747 2.267-6.923-.342-9.532c-2.73-2.73-7.17-2.73-9.898 0s-2.728 7.17 0 9.9a6.96 6.96 0 0 0 4.949 2.05a.5.5 0 0 0 0-1a5.96 5.96 0 0 1-4.242-1.757a6.01 6.01 0 0 1 0-8.486a6.004 6.004 0 0 1 8.484 0a6.01 6.01 0 0 1 0 8.486a.5.5 0 0 0 .034.738" />
+        </symbol>
+        <!-- 向下箭头图标  -->
+        <symbol id="arrow-down" viewBox="0 0 16 16">
+            <path fill="currentColor" fill-rule="non-zero"
+                d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0" />
+        </symbol>
+    </svg>
+
+
+    <!-- 头部模块 -->
+    <header class="header">
+        <div class="header-top">
+            <img class="logo" src="assets/images/logo-bilibili-pink.png@132w_60h.png" alt="">
+            <div class="header-top-right">
+                <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <use href="#nav-search" />
+                </svg>
+                <img class="profile" src="assets/images/profile.png" alt="profile">
+                <div class="download-btn">
+                    下载 APP
+                </div>
+            </div>
+        </div>
+        <!-- channel-menu 这个盒子相对定位，因为里面的内容需要展开 -->
+        <div class="channel-menu">
+            <!-- 里面放一个很宽的盒子 -->
+            <div class="tabs-list">
+                <div class="tabs-list-content">
+                    <!-- <a class="active-text" data-id="0" href="#">首页</a>
+                        <a data-id="1" href="#">动画</a>
+                        <a data-id="2" href="#">番剧</a>
+                        <a data-id="3" href="#">音乐</a>
+                        <a data-id="4" href="#">舞蹈</a>
+                        <a data-id="5" href="#">首页</a>
+                        <a data-id="6" href="#">动画</a>
+                        <a data-id="7" href="#">番剧</a>
+                        <a data-id="8" href="#">音乐</a>
+                        <a data-id="10" href="#">舞蹈</a>
+                        <a data-id="11" href="#">舞蹈</a>
+                        <a data-id="12" href="#">舞蹈</a>
+                        <a data-id="13" href="#">舞蹈</a>
+                        <a data-id="14" href="#">舞蹈</a>
+                        <a data-id="15" href="#">舞蹈</a>
+                        <a data-id="16" href="#">舞蹈</a>
+                        <a data-id="17" href="#">舞蹈</a> -->
+                    <!-- 红色线要写在 a 后面 -->
+                    <!-- <div class="red-line"></div> -->
+                </div>
+            </div>
+            <svg id="arrowWown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <use href="#arrow-down" />
+            </svg>
+            <!-- nav-container模块 -->
+            <div class="nav-container">
+                <svg id="arrowUp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <use href="#arrow-down" />
+                </svg>
+                <div class="lanMu">
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 主体部分 -->
+    <div class="m-home">
+        <!-- 主体部分还有一个遮罩层 -->
+        <div class="m-home-mask"></div>
+        <div class="video-list">
+            <a href="#" class="video-item">
+                <div class="card">
+                    <img src="assets/images/profile.png" alt="">
+                    <div class="count">
+                        <span><i class="iconfont icon_shipin_bofangshu"></i> 播放量</span>
+                        <span><i class="iconfont icon_shipin_danmushu"></i>评论数</span>
+                    </div>
+                </div>
+                <p class="title ellipsis-2">
+                    315晚会能不能曝光下智能电视？N重广告、
+                    套娃会员、操作反人类，当代年轻人是怎么被智能
+                    电视逼疯的？【商业B面&牛顿】
+                </p>
+            </a>
+        </div>
+    </div>
+    <!-- 底部模块 -->
+    <footer class="app">
+        <div class="btn-app">
+            <i class="iconfont Navbar_logo"></i>
+            打开App，看你感兴趣的视频
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="src/js/data.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
