@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    background-color: #eee;
+} */
+/* 遮罩层 */
+.overMask {
+    display: none;
+    position: fixed;
+    left: 0vw;
+    top: 0vw;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ===============头部固定部分=================== */
+.header-top {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 16vw;
+    padding: 0 3vw;
+    z-index: 99;
+    /* border-bottom: 2px solid #ccc; */
+}
+
+.logo {
+    width: 25vw;
+    height: 10vw;
+}
+
+.header-top-right {
+    height: 16vw;
+    display: flex;
+    align-items: center;
+}
+
+#searchIcon {
+    width: 7vw;
+    height: 7vw;
+    color: #999;
+
+}
+
+.profile {
+    width: 8vw;
+    height: 8vw;
+    margin: 0 4vw;
+    border-radius: 9999vw;
+}
+
+.download-btn {
+    width: 28vw;
+    height: 10vw;
+    font-size: 4vw;
+    line-height: 10vw;
+    text-align: center;
+    background-color: #f1468d;
+    border-radius: 3vw;
+    cursor: pointer;
+    color: #eee;
+}
+
+
+
+
+/* ======================导航栏 ====================*/
+.tabs-container {
+    display: flex;
+    align-items: center;
+    margin-top: 16vw;
+    width: 100vw;
+    height: 15vw;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    border-bottom: 1px solid #888;
+}
+
+.tabs-content {
+    display: flex;
+    align-items: center;
+}
+
+.tabs-item {
+    display: flex;
+    align-items: center;
+    width: 26vw;
+    height: 14vw;
+}
+
+/* 控制抽屉的开关图标 */
+.tabs-switch_expand {
+    position: absolute;
+    right: 0;
+    width: 10vw;
+    height: 10vw;
+    background-color: #fff;
+}
+
+.arrowUp-Down {
+    width: 10vw;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    color: #999;
+}
+
+
+
+
+/* =============抽屉模块================= */
+.drawer {
+    position: fixed;
+    margin-top: 16vw;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 58vw;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid #ccc;
+    transform: translate3d(0, -100%, 0);
+    transition: all ease-in-out 500ms;
+    z-index: 1;
+}
+
+.drawer-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drawer-content .item {
+    padding: 4px 14px;
+    color: #7d8698;
+}
+
+.arrowUp {
+    margin-left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.activeText {
+    color: #f1468d;
+}
+
+
+/* ============卡片内容区域================ */
+.m-home {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 4vw 2.5vw;
+}
+
+.ellipsis-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.card {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 34vw;
+    background: #d5c1e9;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.count {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2vw;
+    bottom: 2vw;
+    left: 0;
+    font-size: 4vw;
+    color: white;
+}
+
+.title {
+    margin-top: 2vw;
+    font-size: 3vw;
+}
+
+
+/* ============ 底部模块(动画按钮)========*/
+
+@keyframes popping {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20vw);
+    }
+}
+
+.app {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 16vw;
+    /* animation: popping 0.5s ease-in 1 forwards; */
+}
+
+.btn-app {
+    margin: 0 6vw;
+    height: 16vw;
+    background-color: #cb9bcb;
+    border-radius: 10vw;
+    text-align: center;
+    line-height: 16vw;
+    color: #fff;
+    background-color: #fb7299;
+    font-size: 5vw;
+    box-shadow: 0 0.53333vw 2.66667vw rgb(0 0 0 / 20%);
+}

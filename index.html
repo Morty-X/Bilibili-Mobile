@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilibili移动端</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+</head>
+
+<body>
+    <!-- 图标库 -->
+    <svg style="display: none;">
+        <!-- 搜索图标  -->
+        <symbol id="nav-search" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="m11.271 11.978l3.872 3.873a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.708l-3.565-3.564c2.38-2.747 2.267-6.923-.342-9.532c-2.73-2.73-7.17-2.73-9.898 0s-2.728 7.17 0 9.9a6.96 6.96 0 0 0 4.949 2.05a.5.5 0 0 0 0-1a5.96 5.96 0 0 1-4.242-1.757a6.01 6.01 0 0 1 0-8.486a6.004 6.004 0 0 1 8.484 0a6.01 6.01 0 0 1 0 8.486a.5.5 0 0 0 .034.738" />
+        </symbol>
+        <!-- 向下箭头图标  -->
+        <symbol id="arrow-down" viewBox="0 0 16 16">
+            <path fill="currentColor" fill-rule="non-zero"
+                d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0" />
+        </symbol>
+    </svg>
+
+    <!-- 头部头部固定区域 -->
+    <div class="header-top">
+        <img class="logo" src="images/logo-bilibili-pink.png@132w_60h.png" alt="">
+        <div class="header-top-right">
+            <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <use href="#nav-search" />
+            </svg>
+            <img class="profile" src="images/profile.png" alt="profile">
+            <div class="download-btn">
+                下载 APP
+            </div>
+        </div>
+    </div>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <use href="#arrow-down" />
+    </svg> -->
+    <!-- 挂载点 -->
+    <div class="tabs">中间内容部分</div>
+    <!-- 导航栏结构 -->
+    <!-- 使用函数编写一个创建DOM结构的函数 -->
+    <!--     <div class="tabs-container">
+        <div class="tabs-content">
+            <div class="tabs-item">1</div>
+            <div class="tabs-item">2</div>
+            <div class="tabs-item">3</div>
+            <div class="tabs-item">4</div>
+            <div class="tabs-item">5</div>
+            <div class="tabs-item">6</div>
+            <div class="tabs-item">7</div>
+        </div>
+    </div> -->
+    <div class="mainBody">卡片区域</div>
+    <!-- 主体部分 -->
+    <!--  <div class="m-home">9
+        <div class="video-list">
+            <a href="#" class="video-item">
+                <div class="card">
+                    <img src="assets/images/profile.png" alt="">
+                    <div class="count">
+                        <span><i class="boFangNum iconfont icon_shipin_bofangshu"></i> 播放量</span>
+                        <span><i class="pingLunNum iconfont icon_shipin_danmushu"></i>评论数</span>
+                    </div>
+                </div>
+                <p class="title ellipsis-2">
+                    315晚会能不能曝光下智能电视？N重广告、
+                    套娃会员、操作反人类，当代年轻人是怎么被智能
+                    电视逼疯的？【商业B面&牛顿】
+                </p>
+            </a>
+        </div>
+    </div> -->
+    <!-- 底部模块 -->
+    <footer class="app">
+        <div class="btn-app">
+            <i class="iconfont Navbar_logo"></i>
+            打开App，看你感兴趣的视频
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
