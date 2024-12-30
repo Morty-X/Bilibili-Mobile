@@ -66,12 +66,15 @@ a {
     border-radius: 3vw;
     cursor: pointer;
     color: #eee;
+
 }
 
 
 /* nav部分 */
 .channel-menu {
     position: relative;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #ccc;
 }
 
 .tabs-list {

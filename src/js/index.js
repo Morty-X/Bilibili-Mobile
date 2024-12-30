@@ -1,22 +1,5 @@
 // 导航栏点击切换 小红线效果
 let arrowWown = document.querySelector('#arrowWown');
-
-// (function (window) {
-//     let tabsList = document.querySelector('.tabs-list');
-//     tabsList.addEventListener('touchstart', function (e) {
-//         let targetItem = e.target
-//         if (targetItem.tagName === 'A') {
-//             // 获得 a 的自定义属性
-//             let itemIndex = parseInt(targetItem.dataset.id)
-//             document.querySelectorAll('.tabs-list-content a').forEach(ele => {
-//                 ele.classList.remove('active-text')
-//             })
-//             targetItem.classList.add('active-text')
-//             redLine.style.transform = `translateX(${18 * itemIndex}vw)`
-//         }
-//     })
-// })(window);
-
 // 页面数据渲染内容
 (function (window) {
     // 导航栏内容数据渲染
@@ -30,8 +13,6 @@ let arrowWown = document.querySelector('#arrowWown');
     let navArr = navData.map(function (ele, index, obj) {
         return `<a class='${index === 0 ? 'active-text' : ''}'  data-id='${index}' href='#'>${ele}</a>`
     })
-
-
 
 
     navArr.push(`<div  class="red-line"></div>`)
@@ -54,14 +35,11 @@ let arrowWown = document.querySelector('#arrowWown');
 
     // tab 栏滑动效果
     tabsListContent.addEventListener('touchstart', function (e) {
-
         let initTranslateXValue = (tabsListContent.style.transform).slice(11, -3) ? parseInt((tabsListContent.style.transform).slice(11, -3)) : 0
         // 鼠标第一次点击的位置
         let startDiatanceX = e.changedTouches[0].pageX - initTranslateXValue
-
         // 最大移动的位置，最多只能移动 (tabsList的长度-tabsList的长度)
         let maxTranslateXValue = tabsListContent.scrollWidth - tabsList.offsetWidth
-
         function moveCallBack(e) {
             // 移动的距离 = 鼠标移动的位置 - 第一次按下的位置
             let moveDistance = startDiatanceX - e.changedTouches[0].pageX
@@ -70,7 +48,6 @@ let arrowWown = document.querySelector('#arrowWown');
         }
         // 鼠标滑动调用移动函数
         document.addEventListener('touchmove', moveCallBack)
-
         document.addEventListener('touchend', function (e) {
             document.removeEventListener('touchmove', moveCallBack)
         })
